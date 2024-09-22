@@ -1,12 +1,11 @@
-// Import Express and user routes, create an instance of Express
 const express = require('express');
 const routes = require('./routes/users.js');
 const app = express();
 const PORT = 5000;
 
-// Use JSON parsing middleware and user routes
+// Usar middleware para parsear JSON
 app.use(express.json());
-app.use("/user", routes);
+app.use("/user", routes); // Conecta el router a la ruta "/user"
 
-// Start the server and log a message when it's running
+// Iniciar el servidor
 app.listen(PORT, () => console.log("Server is running at port " + PORT));
